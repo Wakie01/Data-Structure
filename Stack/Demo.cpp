@@ -5,14 +5,16 @@ int main()
 {
 	MyStack * stack=new MyStack(5);
 
-    char elem=0;
-	stack->pop(elem);
+    coordinate elem;
+    elem=stack->pop(elem);
+	elem.printCoordinate();
+	cout<<endl;
 
-	stack->push('h');  //µ×
-	stack->push('e');
-	stack->push('l');
-	stack->push('l');
-	stack->push('o');  //¶¥
+	stack->push(coordinate(1,2));  //µ×
+	stack->push(coordinate(3,2));
+	stack->push(coordinate(4,2));
+	stack->push(coordinate(5,2));
+	stack->push(coordinate(6,2));  //¶¥
 
     stack->stackTraverse(true);
 

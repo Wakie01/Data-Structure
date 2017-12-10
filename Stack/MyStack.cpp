@@ -4,7 +4,7 @@ using namespace std;
 MyStack::MyStack(int size)
 {
 	m_iSize=size;
-	m_pBuffer=new char[m_iSize];
+	m_pBuffer=new coordinate[m_iSize];
     m_iTop=0;
 }
 MyStack::~MyStack()
@@ -27,17 +27,17 @@ int MyStack::stackLength()
 {
 	return m_iTop;
 }
-bool MyStack::push(char elem)
+bool MyStack::push(coordinate elem)
 {
 	if(stackFull()) return false;
 	else 
 	{
-		m_pBuffer[m_iTop]=elem;
+		m_pBuffer[m_iTop]=elem;  //调用默认的拷贝函数
 		m_iTop++;
 	    return true;
 	}
 }
-bool MyStack::pop(char &elem)
+bool MyStack::pop(coordinate &elem)
 {
 	if(stackEmpty()) return false;
 	else
@@ -49,7 +49,7 @@ bool MyStack::pop(char &elem)
 /*char MyStack::pop(char &elem)
 {
 	if(stackEmpty())
-		throw 1;
+		throw 1;  //抛出异常
 	else
 	{
 		elem=m_pBuffer[--m_iTop];
@@ -62,11 +62,13 @@ void MyStack::stackTraverse(bool isFromButtom)
 	if(isFromButtom)
 	{
 		for(i=0;i<m_iTop;i++)
-			cout<<m_pBuffer[i]<<"  ";
+			//cout<<m_pBuffer[i]<<"  "; 这里可以定义运算符重载函数，
+			m_pBuffer[i].printCoordinate();
 	}
 	else
 	{
 		for(i=m_iTop-1;i>=0;i--)
-		    cout<<m_pBuffer[i]<<"  ";
+		    //cout<<m_pBuffer[i]<<"  ";
+			m_pBuffer[i].printCoordinate();
 	}
 }
