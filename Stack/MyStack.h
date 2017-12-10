@@ -9,12 +9,12 @@ public:
 	void clearStack();
 	int stackLength();
 	bool push(char elem);
-	bool pop(char &elem);
+	bool pop(char &elem);  //æå–å…ƒç´ 
 	void stackTraverse(bool isFromButtom);
 private:
-	char *m_pBuffer;    //Õ»¿Õ¼äÖ¸Õë
-	int m_iSize;      //Õ»ÈİÁ¿
-	int m_iTop;      //Õ»¶¥£¬Õ»ÖĞÔªËØ¸öÊı
+	char *m_pBuffer;    //æ ˆç©ºé—´æŒ‡é’ˆ
+	int m_iSize;      //æ ˆå®¹é‡
+	int m_iTop;      //æ ˆé¡¶ï¼Œæ ˆä¸­å…ƒç´ ä¸ªæ•°
 };
 
 #endif
