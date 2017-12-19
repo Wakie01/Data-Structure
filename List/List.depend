@@ -1,0 +1,12 @@
+# depslib dependency file v1.0
+1513697018 source:e:\数据结构\my\list\main.cpp
+	<iostream>
+	<stdlib.h>
+	"List.cpp"
+
+1513696673 e:\数据结构\my\list\list.h
+
+1513696673 e:\数据结构\my\list\list.cpp
+	<iostream>
+	"List.h"
+
