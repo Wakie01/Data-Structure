@@ -1,0 +1,25 @@
+# depslib dependency file v1.0
+1513736587 source:e:\数据结构\my\list\main.cpp
+	<stdlib.h>
+	"List.cpp"
+	"Coordinate.h"
+
+1513737534 e:\数据结构\my\list\list.h
+	"Coordinate.h"
+
+1513737828 e:\数据结构\my\list\list.cpp
+	<iostream>
+	"List.h"
+	"Coordinate.h"
+
+1513736857 source:e:\数据结构\my\list\coordinate.cpp
+	<iostream>
+	"Coordinate.h"
+
+1513736372 e:\数据结构\my\list\coordinate.h
+	<ostream>
+
+1513735878 e:\数据结构\my\list\coordinate.cpp
+	<iostream>
+	"Coordinate.h"
+
