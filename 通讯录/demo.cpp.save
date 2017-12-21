@@ -1,0 +1,50 @@
+#include"Link_List.h"
+#include<stdlib.h>
+#include<iostream>
+using namespace std;
+
+int main()
+{
+    Link_List *list=new Link_List();
+
+    Node temp;
+
+    
+
+   
+    delete list;
+    list=NULL;
+    system("pause");
+    return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

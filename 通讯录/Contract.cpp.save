@@ -1,0 +1,10 @@
+#include"Contract.h"
+#include<iostream>
+using namespace std;
+
+Contract &Contract::operator=(Contract &contract)
+{
+    this->name=contract.name;
+    this->phone=contract.phone;
+    return *this;
+}
