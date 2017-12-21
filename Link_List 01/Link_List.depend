@@ -1,0 +1,19 @@
+# depslib dependency file v1.0
+1513825828 source:e:\数据结构\my\link_list\demo.cpp
+	"Link_List.h"
+	<stdlib.h>
+	<iostream>
+
+1513762456 e:\数据结构\my\link_list\link_list.h
+	"Node.h"
+
+1513753948 e:\数据结构\my\link_list\node.h
+
+1513825422 source:e:\数据结构\my\link_list\link_list.cpp
+	<iostream>
+	"Link_List.h"
+
+1513822580 source:e:\数据结构\my\link_list\node.cpp
+	"Node.h"
+	<iostream>
+
