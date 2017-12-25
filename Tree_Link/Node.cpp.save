@@ -1,0 +1,118 @@
+#include"Node.h"
+#include<stdlib.h>
+
+Node::Node()
+{
+    index=0;
+    data=0;
+    pLChild=NULL;
+    pRChild=NULL;
+    pParent=NULL;
+}
+
+/*
+Node *Node::SearchNode(int nodeIndex)   //Way one
+{
+
+    if(currentNode->index==nodeIndex)
+        return &currentNode;
+
+    Node currentNode=*this;
+    while(currentNode->pLChild!=NULL)     //µÝ¹éË¼Ïë
+    {
+        currentNode=currentNode->pLChild;
+        if(currentNode->index==nodeIndex)
+            return &currentNode;
+    }
+
+    currentNode=*this;
+    while(currentNode->pLChild!=NULL)
+    {
+        currentNode=currentNode->pLChild;
+        if(currentNode->index==nodeIndex)
+            return &currentNode;
+    }
+
+    return NULL;
+}
+*/
+
+Node *Node::SearchNode(int nodeIndex)     //Way Two
+{
+    Node *temp=NULL;
+    if(this->index==nodeIndex)  return this;
+    if(this->pLChild!=NULL)
+    {
+        if(this->pLChild->index==nodeIndex)
+        {
+            return this->pLChild;
+        }
+        else
+        {
+            temp=this->pLChild->searchNode(nodeIndex);   //µÝ¹éË¼Ïë
+            if(temp!=NULL) return temp;
+        }
+    }
+
+    if(this->pRChild!=NULL)
+    {
+        if(this->pRChild->index==nodeIndex)
+        return this->pRChild;
+        else
+        {
+            temp=this->pRChild->searchNode(nodeIndex);
+            if(temp!=NULL) return temp;
+        }
+    }
+
+    return NULL;
+
+}
+
+void Node::DeleteNode()
+{
+    if(this->pLChild!=NULL)  //删除孩子
+    {
+        this->pLChild->DeleteNode();
+    }
+    if(this->pRChild!=NULL)
+    {
+        this->pRChild->DeleteNode();
+    }
+    if(this->pParent!=NULL)        //删除本结点
+    {
+        if(this->pParent->pLChild==this)
+        {
+            this->pParent->pLChild=NULL;
+        }
+        if(this->pParent->pRChild==this)
+        {
+            this->pParent->pRChild=NULL;
+        }
+    }
+    delete this;  //删除temp
+}
+
+void PreorderTraversal ()
+
+
+    void InorderTraversal();   
+    void PostorderTraversal();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,20 @@
+# depslib dependency file v1.0
+1514166659 source:e:\数据结构\my\tree_link\node.cpp
+	"Node.h"
+	<stdlib.h>
+	<iostream>
+
+1514164321 e:\数据结构\my\tree_link\node.h
+
+1514167647 source:e:\数据结构\my\tree_link\tree_link.cpp
+	"Tree_Link.h"
+	<stdlib.h>
+
+1514082303 e:\数据结构\my\tree_link\tree_link.h
+	"Node.h"
+
+1514167647 source:e:\数据结构\my\tree_link\demo.cpp
+	"Tree_Link.h"
+	<iostream>
+	<stdlib.h>
+
